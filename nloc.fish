@@ -1,0 +1,1 @@
+set LAST_LOCATION '~'

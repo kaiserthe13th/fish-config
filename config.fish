@@ -3,8 +3,8 @@
 #!
 #! `#!` means help
 #! `#>` means note
-#! regex`.*` surrounded up down left right by `#` is a title
-#! `#` repeated n times before and after regex`.*` if n >= 2 is a subtitle of nth degree
+#! r`.*` surrounded up down left and right by `#` is a title
+#! `#` repeated n times before and after regex`.*` if n >= 2 is a subtitle of (n-1) th degree
 
 ###################
 # STARSHIP PROMPT #
@@ -14,7 +14,9 @@ starship init fish | source
 ###########
 # ALIASES #
 ###########
+alias mk="touch"
 alias ls="exa --icons --group-directories-first"
+alias l="ls"
 alias ll="exa --icons -l --group-directories-first"
 alias lla="exa -la --icons --group-directories-first"
 alias la="exa -a --icons --group-directories-first"
@@ -44,4 +46,26 @@ eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 # VARS #
 ########
 set -x EDITOR "nvim"
+
+# ./tp.fish
+# ./nloc.fish
+
+#######
+# GIT #
+#######
+
+alias add.="git add ."
+alias commit="git commit"
+alias push="git pull & git push"
+alias push.="git push"
+alias pull="git pull"
+alias stat="git status"
+
+###########
+# CONFIGS #
+###########
+
+alias cfg-fish="cd $HOME/.config/fish"
+alias cfg-awesome="cd $HOME/.config/awesome"
+alias cfg-alacritty="cd $HOME/.config/alacritty"
 
